@@ -1,0 +1,112 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="studentFee">
+            <h2><span jhiTranslate="studentManagementApp.studentFee.detail.title">Student Fee</span> {{ studentFee.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="studentManagementApp.studentFee.totalAcademicFee">Total Academic Fee</span></dt>
+                <dd>
+                    <span>{{ studentFee.totalAcademicFee }}</span>
+                </dd>
+                <dt><span jhiTranslate="studentManagementApp.studentFee.academicFeewaveOff">Academic Feewave Off</span></dt>
+                <dd>
+                    <span>{{ studentFee.academicFeewaveOff }}</span>
+                </dd>
+                <dt><span jhiTranslate="studentManagementApp.studentFee.academicFeePaid">Academic Fee Paid</span></dt>
+                <dd>
+                    <span>{{ studentFee.academicFeePaid }}</span>
+                </dd>
+                <dt><span jhiTranslate="studentManagementApp.studentFee.totalAcademicFeePaid">Total Academic Fee Paid</span></dt>
+                <dd>
+                    <span>{{ studentFee.totalAcademicFeePaid }}</span>
+                </dd>
+                <dt><span jhiTranslate="studentManagementApp.studentFee.academicFeepending">Academic Feepending</span></dt>
+                <dd>
+                    <span>{{ studentFee.academicFeepending }}</span>
+                </dd>
+                <dt><span jhiTranslate="studentManagementApp.studentFee.busAlloted">Bus Alloted</span></dt>
+                <dd>
+                    <span>{{ studentFee.busAlloted }}</span>
+                </dd>
+                <dt><span jhiTranslate="studentManagementApp.studentFee.hostelAlloted">Hostel Alloted</span></dt>
+                <dd>
+                    <span>{{ studentFee.hostelAlloted }}</span>
+                </dd>
+                <dt><span jhiTranslate="studentManagementApp.studentFee.totalBusFee">Total Bus Fee</span></dt>
+                <dd>
+                    <span>{{ studentFee.totalBusFee }}</span>
+                </dd>
+                <dt><span jhiTranslate="studentManagementApp.studentFee.busFeewaveOff">Bus Feewave Off</span></dt>
+                <dd>
+                    <span>{{ studentFee.busFeewaveOff }}</span>
+                </dd>
+                <dt><span jhiTranslate="studentManagementApp.studentFee.busFeePaid">Bus Fee Paid</span></dt>
+                <dd>
+                    <span>{{ studentFee.busFeePaid }}</span>
+                </dd>
+                <dt><span jhiTranslate="studentManagementApp.studentFee.totalBusFeePaid">Total Bus Fee Paid</span></dt>
+                <dd>
+                    <span>{{ studentFee.totalBusFeePaid }}</span>
+                </dd>
+                <dt><span jhiTranslate="studentManagementApp.studentFee.busFeepending">Bus Feepending</span></dt>
+                <dd>
+                    <span>{{ studentFee.busFeepending }}</span>
+                </dd>
+                <dt><span jhiTranslate="studentManagementApp.studentFee.totalHostelFee">Total Hostel Fee</span></dt>
+                <dd>
+                    <span>{{ studentFee.totalHostelFee }}</span>
+                </dd>
+                <dt><span jhiTranslate="studentManagementApp.studentFee.hostelFeewaveOff">Hostel Feewave Off</span></dt>
+                <dd>
+                    <span>{{ studentFee.hostelFeewaveOff }}</span>
+                </dd>
+                <dt><span jhiTranslate="studentManagementApp.studentFee.totalHostelFeePaid">Total Hostel Fee Paid</span></dt>
+                <dd>
+                    <span>{{ studentFee.totalHostelFeePaid }}</span>
+                </dd>
+                <dt><span jhiTranslate="studentManagementApp.studentFee.hostelFeePaid">Hostel Fee Paid</span></dt>
+                <dd>
+                    <span>{{ studentFee.hostelFeePaid }}</span>
+                </dd>
+                <dt><span jhiTranslate="studentManagementApp.studentFee.hostelFeepending">Hostel Feepending</span></dt>
+                <dd>
+                    <span>{{ studentFee.hostelFeepending }}</span>
+                </dd>
+                <dt><span jhiTranslate="studentManagementApp.studentFee.hostelExpenses">Hostel Expenses</span></dt>
+                <dd>
+                    <span>{{ studentFee.hostelExpenses }}</span>
+                </dd>
+                <dt><span jhiTranslate="studentManagementApp.studentFee.year">Year</span></dt>
+                <dd>
+                    <span>{{ studentFee.year }}</span>
+                </dd>
+                <dt><span jhiTranslate="studentManagementApp.studentFee.comments">Comments</span></dt>
+                <dd>
+                    <span>{{ studentFee.comments }}</span>
+                </dd>
+                <dt><span jhiTranslate="studentManagementApp.studentFee.student">Student</span></dt>
+                <dd>
+                    <div *ngIf="studentFee.student">
+                        <a [routerLink]="['/student', studentFee.student?.id, 'view']">{{ studentFee.student?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/student-fee', studentFee.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

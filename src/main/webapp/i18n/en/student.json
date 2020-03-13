@@ -1,0 +1,35 @@
+{
+  "studentManagementApp": {
+    "student": {
+      "home": {
+        "title": "Students",
+        "createLabel": "Create a new Student",
+        "createOrEditLabel": "Create or edit a Student",
+        "notFound": "No Students found"
+      },
+      "created": "A new Student is created with identifier {{ param }}",
+      "updated": "A Student is updated with identifier {{ param }}",
+      "deleted": "A Student is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Student {{ id }}?"
+      },
+      "detail": {
+        "title": "Student"
+      },
+      "studentId": "Student Id",
+      "studentName": "Student Name",
+      "parentName": "Parent Name",
+      "phoneNumber": "Phone Number",
+      "address": "Address",
+      "photo": "Photo",
+      "status": "Status",
+      "comments": "Comments",
+      "student": "Student",
+      "attendence": "Attendence",
+      "fee": "Fee",
+      "className": "Class Name",
+      "section": "Section",
+      "busStops": "Bus Stops"
+    }
+  }
+}
