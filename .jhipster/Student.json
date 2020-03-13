@@ -1,0 +1,90 @@
+{
+    "name": "Student",
+    "fields": [
+        {
+            "fieldName": "studentId",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "studentName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "parentName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "phoneNumber",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "address",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "photo",
+            "fieldType": "byte[]",
+            "fieldTypeBlobContent": "any"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "comments",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "studentMarkes",
+            "otherEntityRelationshipName": "student",
+            "relationshipName": "student"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "attendence",
+            "otherEntityRelationshipName": "student",
+            "relationshipName": "attendence"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "studentFee",
+            "otherEntityRelationshipName": "student",
+            "relationshipName": "fee"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "className",
+            "otherEntityRelationshipName": "class",
+            "relationshipName": "className",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "section",
+            "otherEntityRelationshipName": "section",
+            "relationshipName": "section",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "busStops",
+            "otherEntityRelationshipName": "busRouteName",
+            "relationshipName": "busStops",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200313191900",
+    "entityTableName": "student",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

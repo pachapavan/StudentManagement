@@ -40,6 +40,27 @@ public class CacheConfiguration {
             createCache(cm, com.school.app.domain.User.class.getName());
             createCache(cm, com.school.app.domain.Authority.class.getName());
             createCache(cm, com.school.app.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.school.app.domain.Staff.class.getName());
+            createCache(cm, com.school.app.domain.Staff.class.getName() + ".teachers");
+            createCache(cm, com.school.app.domain.Student.class.getName());
+            createCache(cm, com.school.app.domain.Student.class.getName() + ".students");
+            createCache(cm, com.school.app.domain.Student.class.getName() + ".attendences");
+            createCache(cm, com.school.app.domain.Student.class.getName() + ".fees");
+            createCache(cm, com.school.app.domain.ClassName.class.getName());
+            createCache(cm, com.school.app.domain.ClassName.class.getName() + ".classes");
+            createCache(cm, com.school.app.domain.Section.class.getName());
+            createCache(cm, com.school.app.domain.Section.class.getName() + ".sections");
+            createCache(cm, com.school.app.domain.Subject.class.getName());
+            createCache(cm, com.school.app.domain.Subject.class.getName() + ".subjects");
+            createCache(cm, com.school.app.domain.StudentMarkes.class.getName());
+            createCache(cm, com.school.app.domain.Attendence.class.getName());
+            createCache(cm, com.school.app.domain.StudentFee.class.getName());
+            createCache(cm, com.school.app.domain.BusRoute.class.getName());
+            createCache(cm, com.school.app.domain.BusRoute.class.getName() + ".busStops");
+            createCache(cm, com.school.app.domain.BusStops.class.getName());
+            createCache(cm, com.school.app.domain.BusStops.class.getName() + ".busRouteNames");
+            createCache(cm, com.school.app.domain.StaffSalary.class.getName());
+            createCache(cm, com.school.app.domain.StaffSalary.class.getName() + ".salaries");
             // jhipster-needle-ehcache-add-entry
         };
     }

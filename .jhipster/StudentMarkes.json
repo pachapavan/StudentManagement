@@ -1,0 +1,48 @@
+{
+    "name": "StudentMarkes",
+    "fields": [
+        {
+            "fieldName": "examName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "totalMarkes",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "markes",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "comments",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "student",
+            "otherEntityRelationshipName": "student",
+            "relationshipName": "student",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "subject",
+            "otherEntityRelationshipName": "subject",
+            "relationshipName": "subject",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200313192300",
+    "entityTableName": "student_markes",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "embedded": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
